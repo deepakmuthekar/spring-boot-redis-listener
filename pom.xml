@@ -45,7 +45,7 @@
 	    <snapshotRepository>
 		<id>snapshots</id>
 		<name>DESKTOP-D1P69HB-snapshots</name>
-		<url>http://localhost:8081/artifactory/libs-snapshot-local</url>
+		<url>http://localhost:8081/artifactory/libs-snapshot</url>
 	    </snapshotRepository>
 	</distributionManagement>
 
