@@ -40,8 +40,8 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-	
-	
+
+
 	<build>
 		<finalName>redis-listner-1.0-SNAPSHOT</finalName>
 		<plugins>
@@ -53,46 +53,44 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-				    <source>1.8</source>
-				    <target>1.8</target>
+					<source>1.8</source>
+					<target>1.8</target>
 
 				</configuration>
 			</plugin>
 			<plugin>
-	<groupId>org.jfrog.buildinfo</groupId>
-	<artifactId>artifactory-maven-plugin</artifactId>
-	<version>2.6.1</version>
-	<inherited>false</inherited>
-	<executions>
-		<execution>
-			<id>build-info</id>
-			<goals>
-				<goal>publish</goal>
-			</goals>
-			<configuration>
-				<deployProperties>
-					<gradle>awesome</gradle>
-				</deployProperties>
-				<artifactory>
-					<includeEnvVars>true</includeEnvVars>
-					<envVarsExcludePatterns>*password*,*secret*,*key*,*token*,*passphrase*</envVarsExcludePatterns>
-					<timeoutSec>60</timeoutSec>
-				</artifactory>
-				<publisher>
-					<contextUrl>http://localhost:8081/artifactory</contextUrl>
-					<username>${username}</username>
-					<password>${password}</password>
-					<excludePatterns>*-tests.jar</excludePatterns>
-					<repoKey>libs-release-local</repoKey>
-					<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-				</publisher>
-			 </configuration>
-		</execution>
-	</executions>
-</plugin>
-           
+				<groupId>org.jfrog.buildinfo</groupId>
+				<artifactId>artifactory-maven-plugin</artifactId>
+				<version>2.6.1</version>
+				<inherited>false</inherited>
+				<executions>
+					<execution>
+						<id>build-info</id>
+						<goals>
+							<goal>publish</goal>
+						</goals>
+						<configuration>
+							<deployProperties>
+								<gradle>awesome</gradle>
+							</deployProperties>
+							<artifactory>
+								<includeEnvVars>true</includeEnvVars>
+								<envVarsExcludePatterns>*password*,*secret*,*key*,*token*,*passphrase*</envVarsExcludePatterns>
+								<timeoutSec>60</timeoutSec>
+							</artifactory>
+							<publisher>
+								<contextUrl>http://localhost:8081/artifactory</contextUrl>
+								<username>${username}</username>
+								<password>${password}</password>
+								<excludePatterns>*-tests.jar</excludePatterns>
+								<repoKey>libs-release-local</repoKey>
+								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+							</publisher>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 
- 	
 		</plugins>
 	</build>
 
